@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header id="header">
+    <nav class="navbar">
+     <h1>Expense Tracker</h1>
+    </nav>
+</header>
+<main>
+    <section id ="header1">
+        <div class="container">
+            <div class="parent">
+          <div class="div1">
+            <div><span>Total Spent : </span></div>
+           <div><span id="totalSpent">$0.00</span></div> 
+           </div>
+
+          <div class="div2">
+            <div><span>number of expenses</span></div>  
+            <div><span id="expenseCount">0</span></div> 
+         </div>
+          <div class="div3">
+            <div><span>biggest expense</span></div>  
+            <div><span id="biggestExpense">$0.00</span></div> 
+           </div>
+        <div class="div4">
+            <form id="add-from">
+                <div class="form-add">
+             <h5> Add Expenses</h5>
+            </div>
+            <div class="form-input">
+                <label for="description">Description</label>
+                <input type="text" name="description">
+                <div class="error-ms"></div>
+            </div>
+            <div class="form-input">
+                <label for="amount">Amount</label>
+                <input type="number" name="amount">
+                <div class="error-ms"></div>
+            </div>
+             <div class="form-input">
+                <label >category</label>
+                <select id="category">
+                <option value="">Choose category</option>
+                </select>
+                <div class="error-ms"></div>
+            </div>
+
+             <div class="form-input">
+                <label >Date</label>
+                <input type="date" name="date">
+                <div class="error-ms"></div>
+            </div>
+            <button type="submit">Add Expenses</button>
+            
+        </div>
+            </form >
+        <div class="div5">
+          <div class="form-filter">
+                <label > filter by category</label>
+                <select id="category2">
+                <option value="">Choose category</option>
+                </select>
+                <div class="error"></div>
+            </div>
+
+              <div class="table-responsive">
+            <table class="table align-middle">
+              <thead>
+                <tr>
+                  <th>Description</th>
+                  <th>Amount</th>
+                  <th>Category</th>
+                  <th>Date</th>
+                  <th></th>
+                 
+                </tr>
+              </thead>
+              <tbody id="expenseTableBody">
+                <!-- filled by JS -->
+              </tbody>
+            </table>
+          </div>
+          
+            </div> 
+     </div>
+        </div>
+    </section>
+</main>
+
+<script src="./app.js"></script>
+</body>
+</html>
